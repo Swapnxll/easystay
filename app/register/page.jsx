@@ -104,8 +104,8 @@ const RegisterPage = () => {
               Register
             </button>
 
-            <p>
-              Have an account?
+            <p className='text-center'>
+              Have an account?&nbsp;
               <Link href='/login' className='text-blue-500'>
                 Login
               </Link>

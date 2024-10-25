@@ -6,13 +6,13 @@ export default async function Home() {
   const rooms = await getAllRooms();
 
   return (
-    <>
+    <div className="mb-96">
       <Heading title='Available Rooms' />
       {rooms.length > 0 ? (
         rooms.map((room) => <RoomCard room={room} key={room.$id} />)
       ) : (
         <p>No rooms available at the moment</p>
       )}
-    </>
+    </div>
   );
 }

@@ -10,7 +10,7 @@ const RoomCard = ({ room }) => {
   const imageSrc = room.image ? imageUrl : '/images/no-image.jpg';
 
   return (
-    <div className='bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center'>
+    <div className='bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12'>
       <div className='flex flex-col sm:flex-row sm:space-x-4'>
         <Image
           src={imageSrc}
@@ -38,7 +38,7 @@ const RoomCard = ({ room }) => {
       <div className='flex flex-col sm:flex-row w-full sm:w-auto sm:space-x-2 mt-2 sm:mt-0'>
         <Link
           href={`/rooms/${room.$id}`}
-          className='bg-blue-500 text-white px-4 py-2 rounded mb-2 sm:mb-0 w-full sm:w-auto text-center hover:bg-blue-700'
+          className='bg-black text-white px-4 py-2 rounded mb-2 sm:mb-0 w-full sm:w-auto text-center hover:bg-gray-700'
         >
           View Room
         </Link>

@@ -9,7 +9,7 @@ import '@/assets/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Bookit App | Book a Room',
+  title: 'easyStay',
   description: 'Book a meeting or conference room for your team',
 };
 

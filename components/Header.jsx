@@ -1,9 +1,10 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
-import logo from '@/assets/images/logo.svg';
-import { FaUser, FaSignInAlt, FaSignOutAlt, FaBuilding } from 'react-icons/fa';
+import Logo from '@/components/Logo.jsx';
+import { IoMdLogIn, IoMdLogOut } from 'react-icons/io'; 
+import { CiUser } from "react-icons/ci";
+import { BsHouse } from "react-icons/bs";
 import { toast } from 'react-toastify';
 import destroySession from '@/app/actions/destroySession';
 import { useAuth } from '@/context/authContext';
@@ -30,12 +31,7 @@ const Header = () => {
         <div className='flex h-16 items-center justify-between'>
           <div className='flex items-center'>
             <Link href='/'>
-              <Image
-                className='h-12 w-12'
-                src={logo}
-                alt='Bookit'
-                priority={true}
-              />
+              <Logo />
             </Link>
             <div className='hidden md:block'>
               <div className='ml-10 flex items-baseline space-x-4'>
@@ -75,13 +71,13 @@ const Header = () => {
                     href='/login'
                     className='mr-3 text-gray-800 hover:text-gray-600'
                   >
-                    <FaSignInAlt className='inline mr-1' /> Login
+                    <IoMdLogIn className='inline mr-1' /> Login
                   </Link>
                   <Link
                     href='/register'
                     className='mr-3 text-gray-800 hover:text-gray-600'
                   >
-                    <FaUser className='inline mr-1' /> Register
+                    <CiUser className='inline mr-1' /> Register
                   </Link>
                 </>
               )}
@@ -89,13 +85,13 @@ const Header = () => {
               {isAuthenticated && (
                 <>
                   <Link href='/rooms/my'>
-                    <FaBuilding className='inline mr-1' /> My Rooms
+                    <BsHouse className='inline mr-1' /> My Rooms
                   </Link>
                   <button
                     onClick={handleLogout}
                     className='mx-3 text-gray-800 hover:text-gray-600'
                   >
-                    <FaSignOutAlt className='inline mr-1' /> Sign Out
+                    <IoMdLogOut className='inline mr-1' /> Sign Out
                   </button>
                 </>
               )}

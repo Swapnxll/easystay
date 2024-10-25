@@ -23,7 +23,7 @@ const LoginPage = () => {
   }, [state]);
 
   return (
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center mb-11'>
       <div className='bg-white shadow-lg rounded-lg p-6 w-full max-w-sm mt-20'>
         <form action={formAction}>
           <h2 className='text-2xl font-bold text-center text-gray-800 mb-6'>
@@ -72,8 +72,8 @@ const LoginPage = () => {
               Login
             </button>
 
-            <p>
-              No account?
+            <p className='text-center'>
+              No account?&nbsp; 
               <Link href='/register' className='text-blue-500'>
                 Register
               </Link>
