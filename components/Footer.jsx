@@ -14,14 +14,9 @@ const Footer = () => {
           <Link href='/'>
               <Logo />
             </Link>
-          {/* <p>
-            Bookit Ltd.
-            <br />
-            Providing reliable Bookings since 1992
-          </p> */}
+          
         </aside>
         <nav className="flex flex-col items-end">
-          {/* <h6 className="footer-title mb-2">Social</h6> */}
           <div className="grid grid-flow-col gap-4">
             <a href="#" aria-label="Twitter">
               <svg
